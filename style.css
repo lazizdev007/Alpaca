@@ -17,11 +17,11 @@ body{
 }
 
 .navbar{
-    width: 100%;
+    width: 1440px;
     padding: 10px 122px 10px 122px;
     z-index: 1;
     background:  #131417;
-    box-shadow: 0px 4px 4px rgba(19, 20, 23, 0.4);
+    box-shadow: 0 4px 4px rgba(19, 20, 23, 0.4);
     display: flex;
     align-items: center;
     color: #fafafa;
@@ -30,6 +30,8 @@ body{
 .logo{
     width: 46px;
     cursor: pointer;
+    object-fit: cover;
+    vertical-align: top;
 }
 
 .menu{
@@ -39,16 +41,46 @@ body{
     margin: 0 94px 0 158px;
 }
 
+ ul li{
+    position: relative;
+}
+
 .menu li a{
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #fafafa;
-    transition: .5s ease;
+    transition: .5s;
 }
 
 .menu li a:hover{
     color: #EB5757;
+}
+
+.dropdown__menu{
+    display: none;
+    transition: .5s ease-in-out;
+}
+
+.navbar ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #252830;
+}
+
+.dropdown__menu ul{
+    display: block;
+}
+
+.dropdown__menu ul li{
+    width: 320px;
+    padding: 10px;
+}
+
+.dropdown__menu ul li:hover{
+    background: #131417;
 }
 
 .destination{
@@ -67,5 +99,18 @@ body{
 .image__pic{
     background-size: cover;
     background-position: top;
+}
+
+.dropdown__menu-1{
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.dropdown__menu ul li:hover .dropdown__menu-1{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 320px;
+    background: #131417;
 }
 
